@@ -128,15 +128,9 @@ export default {
           image: Red,
         },
       ],
-      box: {
-        id: 0,
-        isOn: false,
-      },
     };
   },
-  mounted() {
-    console.log(this.box);
-  },
+  mounted() {},
   computed: {},
   methods: {
     onClick(i, befor, after, up, down) {
@@ -145,30 +139,9 @@ export default {
         if (item.id === i || item.id === befor || item.id === after || item.id === up || item.id === down) {
           if (item.image === Green) {
             item.image = Red;
-
-            // if (item.id != 5 && item.id != 10 && item.id != 15 && item.id != 20) {
-            //   item.image = Red;
-            // } else {
-            //   //   if (item.id != 4 && item.id != 9 && item.id != 14 && item.id != 19 && item.id != 24) {
-            //   //     item.image = Green;
-            //   //   } else {
-            //   item.image = Green;
-            //   //   }
-            // }
           } else {
             item.image = Green;
-
-            // if (item.id != 5 && item.id != 10 && item.id != 15 && item.id != 20) {
-            //   item.image = Green;
-            //   // } else {
-            //   //   if (item.id != 4 && item.id != 9 && item.id != 14 && item.id != 19 && item.id != 24) {
-            //   //     item.image = Red;
-            // } else {
-            //   item.image = Red;
-            // }
-            // }
           }
-          console.log(item);
         }
         return item;
       });
